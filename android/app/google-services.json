@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "974494380195",
+    "firebase_url": "https://grocery-list-dffe8.firebaseio.com",
+    "project_id": "grocery-list-dffe8",
+    "storage_bucket": "grocery-list-dffe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974494380195:android:a6da85802617d2e4",
+        "android_client_info": {
+          "package_name": "toopejoseph.grocerylist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974494380195-vafet0o9bqdsldh59us5g45l0innfdnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuRPlKlnLQqOoq1jBsIq7gDuvffPSRssw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
