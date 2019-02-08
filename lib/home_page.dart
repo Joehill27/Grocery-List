@@ -3,6 +3,8 @@ import 'authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'item.dart';
 import 'dart:async';
+import 'recipePage.dart';
+import 'favorites.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.auth, this.userId, this.onSignedOut})
@@ -181,16 +183,16 @@ class _HomePageState extends State<HomePage> {
         case 0:
           break;
         case 1:
-          /*Navigator.push(
+          Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => RecipeList()),
-          );*/
+            MaterialPageRoute(builder: (context) => RecipePage()),
+          );
           break;
         case 2:
-          /*Navigator.push(
+          Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Favorite()),
-          );*/
+            MaterialPageRoute(builder: (context) => FavoritePage()),
+          );
           break;
       }
     });
