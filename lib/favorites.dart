@@ -3,6 +3,7 @@ import 'authentication.dart';
 import 'recipe.dart';
 import 'package:flutter/material.dart';
 import 'recipePage.dart';
+import 'home_page.dart';
 
 class FavoritePage extends StatefulWidget {
   FavoritePage({Key key, this.auth, this.userId, this.onSignedOut})
@@ -39,7 +40,10 @@ class _FavoritePageState extends State<FavoritePage> {
     setState(() {
       switch (index) {
         case 0:
-          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
           break;
         case 1:
         Navigator.push(

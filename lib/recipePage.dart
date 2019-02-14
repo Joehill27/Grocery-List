@@ -2,6 +2,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'authentication.dart';
 import 'recipe.dart';
 import 'package:flutter/material.dart';
+import 'home_page.dart';
+import 'favorites.dart';
 
 class RecipePage extends StatefulWidget {
   RecipePage({Key key, this.auth, this.userId, this.onSignedOut})
@@ -38,19 +40,18 @@ class _RecipePageState extends State<RecipePage> {
       setState(() {
         switch (index) {
           case 0:
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
             break;
           case 1:
-          /*Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => RecipeList()),
-          );*/
             break;
           case 2:
-          /*Navigator.push(
+          Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Favorite()),
-          );*/
+            MaterialPageRoute(builder: (context) => FavoritePage()),
+          );
             break;
         }
       });
@@ -72,7 +73,6 @@ class _RecipePageState extends State<RecipePage> {
         body: null,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-
           },
           tooltip: 'Increment',
           child: Icon(Icons.add),

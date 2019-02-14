@@ -1,29 +1,33 @@
 import 'package:firebase_database/firebase_database.dart';
-import 'item.dart';
 
 class Recipe {
   String key;
   String subject;
+  String url;
+  String ingredients;
   bool completed;
   String userId;
-  List<String> ingredients;
+  var image;
 
-  Recipe(this.subject, this.userId, this.completed, this.ingredients);
+  Recipe(this.subject, this.url, this.ingredients, this.userId,  this.image, this.completed);
 
-  /*Recipe.fromSnapshot(DataSnapshot snapshot) :
+  Recipe.fromSnapshot(DataSnapshot snapshot) :
         key = snapshot.key,
-        userId = snapshot.value["userId"],
         subject = snapshot.value["subject"],
+        url = snapshot.value["url"],
+        ingredients = snapshot.value["ingredients"],
+        userId = snapshot.value["userId"],
+        image = snapshot.value["image"],
         completed = snapshot.value["completed"];
-        List<String> ingredients = makeList(snapshot.value);
 
-          toJson() {
-            return {
-              "userId": userId,
-              "subject": subject,
-              "completed": completed,
-              "ingredients": ingredients,
-            };
-          }
-        }*/
+  toJson() {
+    return {
+      "subject": subject,
+      "url": url,
+      "ingredients": ingredients,
+      "userId": userId,
+      "image": image,
+      "completed": completed,
+    };
+  }
 }
